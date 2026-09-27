@@ -34,3 +34,10 @@ C:\Users\Admin\YoutubeClone\obj\Debug\net10.0\ref\Task.dll
 C:\Users\Admin\YoutubeClone\bin\Debug\net10.0\Client\.oxlintrc.json
 C:\Users\Admin\YoutubeClone\bin\Debug\net10.0\Client\package-lock.json
 C:\Users\Admin\YoutubeClone\bin\Debug\net10.0\Client\package.json
+C:\Users\Admin\YoutubeClone\obj\Debug\net10.0\Task.sourcelink.json
+C:\Users\Admin\YoutubeClone\bin\Debug\net10.0\Task.staticwebassets.runtime.json
+C:\Users\Admin\YoutubeClone\obj\Debug\net10.0\compressed\v0llwy3q7q-{0}-oeduuo2com-oeduuo2com.gz
+C:\Users\Admin\YoutubeClone\obj\Debug\net10.0\compressed\2pc522phom-{0}-ptwfedqcdr-ptwfedqcdr.gz
+C:\Users\Admin\YoutubeClone\obj\Debug\net10.0\compressed\qtjabjh00e-{0}-180dmtdpho-180dmtdpho.gz
+C:\Users\Admin\YoutubeClone\obj\Debug\net10.0\compressed\egokrhdtxp-{0}-g3h7a9wx5y-g3h7a9wx5y.gz
+C:\Users\Admin\YoutubeClone\obj\Debug\net10.0\compressed\ugcotzwcxv-{0}-ojb34m0pze-ojb34m0pze.gz

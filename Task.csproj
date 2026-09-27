@@ -4,10 +4,29 @@
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ClientRoot>$(MSBuildProjectDirectory)\Client\</ClientRoot>
+    <ClientOutput>$(MSBuildProjectDirectory)\wwwroot\</ClientOutput>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.10" />
+    <ClientBuildInput Include="$(ClientRoot)**\*" Exclude="$(ClientRoot)node_modules\**\*;$(ClientRoot)dist\**\*" />
   </ItemGroup>
+
+  <Target Name="InstallClientDependencies"
+          Inputs="$(ClientRoot)package.json;$(ClientRoot)package-lock.json"
+          Outputs="$(ClientRoot)node_modules\.package-lock.json"
+          Condition="'$(DesignTimeBuild)' != 'true'">
+    <Exec Command="npm ci" WorkingDirectory="$(ClientRoot)" />
+  </Target>
+
+  <Target Name="BuildClient"
+          BeforeTargets="Build"
+          DependsOnTargets="InstallClientDependencies"
+          Inputs="@(ClientBuildInput)"
+          Outputs="$(ClientOutput)index.html"
+          Condition="'$(DesignTimeBuild)' != 'true'">
+    <Exec Command="npm run build" WorkingDirectory="$(ClientRoot)" />
+  </Target>
 
 </Project>
